@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    box-shadow: 0px 0px 10px 5px rgb(122, 50, 255);
+}
+
+.btnAddTodolist {
+    background-color:  rgba(140, 0, 255, 0.377);
+    width: 180px;
+    height: 90px;
+    height: 30px !important;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+.btnAddTodolist:hover{
+    color: rgb(94, 235, 29);
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.inputStyled {
+    background-color: rgba(140, 0, 255, 0.377);
+    height: 30px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+input::placeholder {
+    color: rgb(151, 151, 151);
+  }
+
+.itemForm{
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: (140, 0, 255, 0.377);
+}
+.itemForm:hover {
+    background-color: rgba(125, 3, 224, 0.798);
+}
+
+.logo {
+    width: 300px;
+}
