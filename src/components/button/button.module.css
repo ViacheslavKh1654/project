@@ -1,0 +1,48 @@
+.button_grid {
+    display: grid;
+    grid-template-columns: 160px 160px;
+    gap: 15px;
+    row-gap: 15px;
+    justify-content: center;
+    margin: 25px 0px 20px 0px;
+}
+
+.button_grid button{
+    width: 160px;
+    height: 65px;
+    border-radius: 7px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.next_btn {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    border-radius: 7px;
+    border: none;
+    width: 335px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.other_interests {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    border-radius: 7px;
+    border: none;
+    width: 335px;
+    height: 40px;
+    
+}
+
+.other_interests_box {
+    display: flex;
+    justify-content: center;
+}
+
+.sumOfInterests {
+    display: flex;
+    justify-content: space-around;
+}

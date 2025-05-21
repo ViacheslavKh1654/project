@@ -1,130 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Happy+Monkey&family=Nova+Round&family=Passion+One:wght@400;700;900&family=Prata&family=Tilt+Warp&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Happy+Monkey&family=Kalnia+Glaze:wght@100..700&family=Nova+Round&family=Passion+One:wght@400;700;900&family=Prata&family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&display=swap');
 
-.main {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 70px;
-}
-
-.todoList {
-    height: 400px;
-    width: 250px;
-    border-radius: 5px;
-    border: 1px solid rgb(171, 80, 255);
-    padding: 0px 20px;
+main {
     display: flex;
     flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: "Passion One", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-.todoList h1 {
-  margin-top: 20px;
-}
-.h1opacity {
-  opacity: 50%;
-  transition: 0.3s ease-in-out;
+    width: 370px;
 }
 
-.selectionButtons{
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
-    margin-bottom: 60px; 
-    gap: 13px;
+.title {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 30px;
+    margin-left: 18px;
 }
 
-.BtnBuy {
-    background-color: rgba(97, 255, 79, 0.654);
-    height: 40px;
-    width: 130px;
-    border-radius: 5px;
-    border: 1px solid rgb(0, 0, 0);
-    color: white;
-    
-}
-.BtnBuy:hover{
-  background-color: rgb(52, 165, 40);
+.title_modal_window {
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.131);
+   margin-bottom: 20px;
+   padding: 20px;
+   width: 100%;
 }
 
-.btnDetails {
-    background-color: rgba(76, 0, 111, 0.603);
-    border-radius: 5px;
-    border: 1px solid rgb(71, 0, 104);
-    height: 40px;
-    width: 150px;
-    color: rgb(255, 255, 255);
-    
+li {
+  list-style-type: none;
+  border-top: 1px solid #d8d7d7;
 }
-.btnDetails:hover {
-  background-color: rgb(107, 0, 156);
-}
-
-.BoxbtnClickDetails {
-  background-color: rgba(0, 0, 0, 0.89);
-  border: 1px solid blueviolet;
-  border-radius: 5px;
-  margin-left: -21px;
-  width: 250px;
-  text-align: 20px;
-  height: 100%;
+.li_box {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-family: "Passion One", serif;
-  font-weight: 700;
-  font-style: normal;
-  position: relative;
+  justify-content: space-between;
+  padding: 15px 30px 15px 30px;
+  
 }
 
-.BoxbtnClickBookNow {
-  background-color: rgba(0, 0, 0, 0.89);
-  border: 1px solid blueviolet;
-  border-radius: 5px;
-  margin-left: -21px;
+.modal_overlay {
+  position: fixed; /* фиксированное положение на экране */
+  width: 370px; /* растягивается на весь экран */
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный чёрный фон */
   display: flex;
-  flex-direction: column;
-  justify-content: center;gap: 30px;
-  column-gap: 20px;
-  width: 250px;
-  height: 100%;
-  font-family: "Passion One", serif;
-  font-weight: 700;
-  font-style: normal;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000; /* поверх других элементов */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  
+}
+.modal_overlay.fadeOut {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.BoxbtnClickBookNow input {
-  background-color: rgba(204, 93, 255, 0);
-  border-radius: 5px;
-  height: 30px;
-  border-radius: 5px;
-  width: 150px;
-  border: none; 
-  border-bottom: 2px solid rgb(255, 255, 255);
-  outline: none; 
-  padding: 5px;
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-input[type="datetime-local"] {
-  color: rgb(255, 255, 255);
+.slideUp {
+  animation: slideUp 0.3s ease forwards;
 }
 
-.closeWindow {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: rgba(233, 61, 61, 0.486);
-  width: 25px;
-  height: 25px;
-  border: none;
-  color: rgba(255, 255, 255, 0.63);
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+.modal_content {
+  background: white; 
+  border-radius: 10px;
+  max-height: 80%; 
+  overflow: scroll; /* прокрутка если слишком много текста */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+  width: 100%;
+  height: 80vh;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+.slideDown {
+  animation: slideDown 0.3s ease forwards;
 }
